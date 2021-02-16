@@ -69,6 +69,8 @@ def recognize_attendence():
 
 
         attendance = attendance.drop_duplicates(subset=['Id'], keep='first')
+        cv2.namedWindow("Attendance", cv2.WND_PROP_FULLSCREEN)
+        cv2.setWindowProperty("Attendance", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
         cv2.imshow('Attendance', im)
         if (cv2.waitKey(1) == ord('q')):
             break
