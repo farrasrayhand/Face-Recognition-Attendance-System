@@ -85,7 +85,7 @@ def Trainimages():
 def RecognizeFaces():
     Recognize.recognize_attendence()
     key = input("Enter any key to return main menu")
-    mainMenu()
+    exit()
 
 
 # ---------------main driver ------------------
