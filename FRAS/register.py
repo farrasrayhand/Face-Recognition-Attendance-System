@@ -49,6 +49,7 @@ def mainMenu():
                 mainMenu()
         except ValueError:
             print("Invalid Choice. Enter 1-4\n Try Again")
+            mainMenu()
     exit
 
 

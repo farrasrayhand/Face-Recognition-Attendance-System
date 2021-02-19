@@ -23,60 +23,20 @@ def mainMenu():
 
     while True:
         try:
-            choice = 4
+            choice = 1
 
             if choice == 1:
-                checkCamera()
-                break
-            elif choice == 2:
-                CaptureFaces()
-                break
-            elif choice == 3:
-                Trainimages()
-                break
-            elif choice == 4:
                 RecognizeFaces()
                 break
-            elif choice == 5:
-                os.system("py automail.py")
-                break
-                mainMenu()
-            elif choice == 6:
+            elif choice == 2:
                 print("Thank You")
                 break
             else:
-                print("Invalid Choice. Enter 1-4")
+                print("Invalid Choice. Enter 1-2")
                 mainMenu()
         except ValueError:
-            print("Invalid Choice. Enter 1-4\n Try Again")
+            print("Invalid Choice. Enter 1-2\n Try Again")
     exit
-
-
-# ---------------------------------------------------------
-# calling the camera test function from check camera.py file
-
-def checkCamera():
-    check_camera.camer()
-    key = input("Enter any key to return main menu")
-    mainMenu()
-
-
-# --------------------------------------------------------------
-# calling the take image function form capture image.py file
-
-def CaptureFaces():
-    Capture_Image.takeImages()
-    key = input("Enter any key to return main menu")
-    mainMenu()
-
-
-# -----------------------------------------------------------------
-# calling the train images from train_images.py file
-
-def Trainimages():
-    Train_Image.TrainImages()
-    key = input("Enter any key to return main menu")
-    mainMenu()
 
 
 # --------------------------------------------------------------------
@@ -84,7 +44,6 @@ def Trainimages():
 
 def RecognizeFaces():
     Recognize.recognize_attendence()
-    key = input("Enter any key to return main menu")
     exit()
 
 
